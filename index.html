@@ -1,32 +1,40 @@
-	<html>
-	<head>
-	<link rel ="stylesheet" href="css/navbar.css">
-	<link rel ="stylesheet" href="css/bootstrap.min.css">
-</head>
+<!DOCTYPE html>
+<html>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Product</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact us</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+
+<p>Enter a number and click OK:</p>
+
+<input id="id1" type="number" max="10"><br>
+<input id="id2" type="name" max="20">
+<button onclick="myFunction()">OK</button>
+<button onclick="myFunction()">K</button>
+
+<p>If the number is greater than 100 (the input's max attribute), an error message will be displayed.</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var txt = "";
+  if (document.getElementById("id1").validity.rangeOverflow) {
+    txt = "Value too large";
+  } else {
+    txt = "Input OK";
+  } 
+  document.getElementById("demo").innerHTML = txt;
+}
+function myFunction2() {
+var txt = "";
+  if (document.getElementById("id2").validity.rangeOverflow) {
+    txt = "name too large";
+  } else {
+    txt = "Input OK";
+  } 
+  document.getElementById("demo").innerHTML = txt;
+}
+
+
+</script>
+
 </body>
 </html>
